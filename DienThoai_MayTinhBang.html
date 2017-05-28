@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auction</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assests/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style_DienGiaDungDienLanh.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+     
+        .navbarcustom{
+       background-color:#ffffff;
+       font-weight: normal;
+       font-size: 18px;
+       color: #020202;
+      }
+      .ulcustom>li>a{
+         color: #020202;
+      }
+    </style>
+</head>
+<body class="body">
+
+	<div class="container-fluid">
+		<div class="row heading">
+			<!--Logo-->
+			<div class="col-sm-3 col-md-3 col-lg-3 col-lg-3"> 			
+				<div class="logo">
+					Auction.com
+				</div>
+			</div>
+			<!--Search input-->
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm" id="TimKiemSP"> 
+			</div>
+			<!--Search button-->
+			<div class="col-sm-1 col-md-1 col-lg-1">
+				<button type="submit" class="btn btn-default">
+               		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+           		</button>
+			</div>
+			<!--Sign up-->
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a href="#">
+					<span class="glyphicon glyphicon-user"></span>
+					Sign Up
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+			<nav class="navbar navbar-default navheading">
+				<ul class="nav navbar-nav">
+      				<li>
+      					<a href="#">Trang chủ</a>
+      				</li>
+      				<li class="dropdown userdropdown">
+        				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Danh mục sản phẩm
+        				<span class="caret"></span></a>
+        				<ul class="dropdown-menu">
+          						<li><a href="#">Điện máy</a></li>
+          						<li><a href="#">Văn phòng phẩm</a></li>
+          						<li><a href="#">Mỹ phẩm</a></li>
+        				</ul>
+      				</li>
+      				<li><a href="#">Sản phẩm bạn đã xem</a></li>
+      				<li><a href="#">Something</a></li>
+    			</ul>
+			</nav>
+		</div>	
+
+		<div class="row ">
+			<nav class="navbar navbar-default navbarcustom">
+                <ul class="nav navbar-nav ulcustom">
+                	 <li class="dropdown userdropdown" >
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-left: 117px;color:#ffffff; background-color: #189eff;">ĐANG ĐẤU GIÁ
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                                <li><a href="DienGiaDung_DienLanh.html">Điện gia dụng - Điện lạnh</a></li>
+                                <li><a href="DienThoai_MayTinhBang.html">Điện thoại - máy tính bảng</a></li>
+                                <li><a href="Laptop_ThietBiIT.html">Laptop - Thiết bị IT</a></li>
+                                <li><a href="MayAnh.html">Máy ảnh - Quay phim</a></li>
+                                <li><a href="TheThao.html">Thể thao - Dã ngoại</a></li>
+                                <li><a href="ThietBiSo.html">Thiết bị số - Phụ kiện</a></li>
+                                <li><a href="Tivi_ThietBiNgheNhin.html">Ti vi - Thiết bị nghe nhìn</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a  href="KetThucDauGia.html">MỚI KẾT THÚC</a>
+                    </li>
+                    <li><a href="KetQua.html">KẾT QUẢ</a></li>
+                    
+                </ul>
+            </nav>
+		</div>	
+		<div class="row justify-content-center">
+			<div class="col-sm-1 col-md-1 col-lg-1 "></div>
+			<div class="col-sm-10 col-md-10 col-lg-10 ">
+				<div class="panel panel-default">
+				   <div class="panel-heading heading" style="background-color: #189eff; color: white; font-size: 18px;font-weight: normal;line-height: 15px;">ĐIỆN GIA DỤNG - ĐIỆN LẠNH</div>
+				    <div class="panel-body backgroundSanpham">
+				    	
+						<div class="row">
+						    
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/1.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang1.html" class="TenSanPham">		 Oppo F2
+						                </a>
+						             	<p>7.400.000đ</p>
+						             	<div class="clockdiv" id="clock1">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="7.505.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/2.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang2.html" class="TenSanPham">		 Iphone 6s plus
+						                </a>
+						             	<p>12.500.000đ</p>
+						             	<div class="clockdiv" id="clock2">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="12.505.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/3.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang3.html" class="TenSanPham">		 Samsung galaxy S8
+						                </a>
+						             	<p>21.000.000đ</p>
+						             	
+						             	<div class="clockdiv" id="clock3">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="21.205.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/4.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang4.html" class="TenSanPham">		 Samsung J7 Phrime
+						                </a>
+						             	<p>7.100.000đ</p>
+						             	<div class="clockdiv" id="clock4">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="7.205.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/5.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang5.html" class="TenSanPham">		 Samsung A5
+						                </a>
+						             	<p>8.550.000đ</p>
+						             	<div class="clockdiv" id="clock5">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="8.605.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/6.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang6.html" class="TenSanPham">		 Samsung galaxy s7
+						                </a>
+						             	<p>12.400.000đ</p>
+						             	<div class="clockdiv" id="clock6">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="12.505.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+							<div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/7.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang7.html" class="TenSanPham">		 RedMi note4
+						                </a>
+						             	<p>8.600.000đ</p>
+						             	<div class="clockdiv" id="clock7">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="8.700.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+							
+							<div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/8.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang8.html" class="TenSanPham">		 Iphong 7
+						                </a>
+						             	<p>22.800.000đ</p>
+						             	<div class="clockdiv" id="clock8">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="12.905.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						   
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/9.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang9.html" class="TenSanPham">		 galaxy S8
+						                </a>
+						             	<p>21.800.000đ</p>
+						             	<div class="clockdiv" id="clock9">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="21.850.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/10.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang10.html" class="TenSanPham">		 Hawai s5
+						                </a>
+						             	<p>11.800.000đ</p>
+						             	
+						             	<div class="clockdiv" id="clock10">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="11.900.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/11.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang11.html" class="TenSanPham">		 Asus Zenfone 2
+						                </a>
+						             	<p>5.800.000đ</p>
+						             	<div class="clockdiv" id="clock11">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="5.840.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/12.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang12.html" class="TenSanPham">		 Philips E124
+						                </a>
+						             	<p>800.000đ</p>
+						             	<div class="clockdiv" id="clock12">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="905.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+							<div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/13.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang13.html" class="TenSanPham">		 Nokia 3310 Dual Sim
+						                </a>
+						             	<p>1.060.000đ</p>
+						             	<div class="clockdiv" id="clock13">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="1.805.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+							<div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/14.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang14.html" class="TenSanPham">		 HTC 
+						                </a>
+						             	<p>13.800.000đ</p>
+						             	<div class="clockdiv" id="clock14">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="14.505.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/15.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang15.html" class="TenSanPham">		Máy tính bảng Asus
+						                </a>
+						             	<p>5.800.000đ</p>
+						             	<div class="clockdiv" id="clock15">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="5.805.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/16.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang16.html" class="TenSanPham">		Ipad 2
+						                </a>
+						             	<p>4.800.000đ</p>
+						             	<div class="clockdiv" id="clock16">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="4.905.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/17.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang17.html" class="TenSanPham">		Ipad air 2
+						                </a>
+						             	<p>8.800.000đ</p>
+						             	<div class="clockdiv" id="clock17">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="8.955.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/18.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang18.html" class="TenSanPham">		Máy tính bảng Asus Pro
+						                </a>
+						             	<p>4.800.000đ</p>
+						             	<div class="clockdiv" id="clock18">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="4.905.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/19.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang19.html" class="TenSanPham">		Máy tính bảng Accer
+						                </a>
+						             	<p>3.800.000đ</p>
+						             	<div class="clockdiv" id="clock19">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="3.965.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+						    <div class="col-sm-3 col-md-3 col-lg-3">
+						        <div class="thumbnail">
+						         <center> 
+						           <img src="img/DienThoaiMayTinhBang/20.jpg" alt="...">
+						            <div class="caption">
+						                <a href="DienThoaiMayTinhBang20.html" class="TenSanPham">		Máy tính bảng Accer Q12
+						                </a>
+						             	<p>5.800.000đ</p>
+						             	<div class="clockdiv" id="clock20">
+                                                <img src ="img/Time.png" alt="Thời gian đấu giá"/>
+                                                <div>
+                                                  <span class="days"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="hours"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="minutes"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+                                                <div>
+                                                  <span class="seconds"></span>
+                                                  <div class="smalltext"></div>
+                                                </div>
+	                                     </div>
+
+                                      	<div class="Time">
+	                                          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ngày</div>
+	                                          <div>&nbsp;Giờ</div>
+	                                          <div>&nbsp;Phút</div>
+	                                          <div>Giây</div>   
+                                      	</div>
+                                    	<div class="NhapGiaVaDauGia">
+	                                          <div><input type="text" class="form-control GiaSanPham" value="5.805.000"/> </div>
+	                                          <div><button type="button" class="btn btn-primary DoiGiaSanPham">ĐẤU GIÁ</button></div>
+                                    	</div>
+						            </div>
+						         </center>
+						        </div>
+						    </div>
+
+
+						     
+						</div>
+				    </div>
+				</div>
+			</div>	
+			<div class="col-sm-1 col-md-1 col-lg-1 "></div>
+		</div>
+		
+	
+	</div>
+	<script type="text/javascript" src="assests/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="assests/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jst.js"></script>
+	<script type="text/javascript">
+		var deadline = new Date(Date.parse(new Date()) + 10 * 24 * 60 * 60 * 1000);
+		var deadline1 = new Date(Date.parse(new Date()) + 1* 24 * 60 * 60 * 1000);
+		var deadline2 = new Date(Date.parse(new Date()) + 5 * 24 * 60 * 60 * 1000);
+			initializeClock('clock1', deadline);
+			initializeClock('clock2', deadline);
+			initializeClock('clock3', deadline1);
+			initializeClock('clock4', deadline);
+			initializeClock('clock5', deadline2);
+			initializeClock('clock6', deadline1);
+			initializeClock('clock7', deadline2);
+			initializeClock('clock8', deadline);
+			initializeClock('clock9', deadline1);
+			initializeClock('clock10', deadline2);
+			initializeClock('clock11', deadline1);
+			initializeClock('clock12', deadline);
+			initializeClock('clock13', deadline1);
+			initializeClock('clock14', deadline2);
+			initializeClock('clock15', deadline);
+			initializeClock('clock16', deadline1);
+			initializeClock('clock17', deadline2);
+			initializeClock('clock18', deadline);
+			initializeClock('clock19', deadline1);
+			initializeClock('clock20', deadline2);
+
+	</script>
+</body>
+</html>
