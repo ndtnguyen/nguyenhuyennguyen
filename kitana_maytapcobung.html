@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auction</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assests/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+	<style type="text/css">
+		.heading {
+			background-color: #189EFF;
+			padding-top: 5px;
+
+		}
+		.navheading {
+			background-color:#189EFF;
+			padding: 0px;
+			border:0px;
+			border-radius: 0px;
+			color: #ffffff;
+		}
+		.logo {
+			font-size: 25pt;
+			font-weight: bold;
+			color: white;
+		}
+		.navbar a {
+			text-decoration: none;
+			color: #ffffff;
+		}
+		.ulcustom{
+			color: #ffffff;
+		}
+		#Danhmucsanpham{
+			color: #ffffff;
+		}
+		#Danhmuc{
+			background-color:#189EFF;
+		}
+		.TimKiemSP{
+			padding-top: 8px;
+			
+		}
+		
+		.inputext{
+			font-size: 13px;
+			height: 40px;
+
+
+		}
+		#ChinhSachDauGia{
+			color: #189EFF;
+		}
+		.ThongTinDangKi{
+			padding-left: 63px;
+			padding-right: 63px;
+			font-size: 13px;
+		}
+		
+		.EditButtonLogin, .EditButtonExit{
+			padding-top: 4px;
+			padding-left: 2px;
+			padding-right: 2px;
+			padding-bottom: 7px;
+			border-radius: 5px;
+			border: solid 2px #ffffff;
+			margin-right: 3px;
+			margin-left: 5px;
+			margin-top:7px;
+			height: 45px;
+			
+		}
+		.EditButtonExit{
+			background-color: #189EFF;
+			color: #fff;
+			margin-left:200px;
+			padding-top: 10px;
+			padding-left: 10px;
+			
+		}
+		#btnTaiKhoan{
+			background-color: #189EFF;
+			border: 0px;
+			color: #fff;
+			margin-right: 3px;
+		}
+		#btnDangKiChinh, #btnDangNhapChinh{
+			font-size: 13px;
+
+		}
+		.dropdown-item
+		{
+			color: #000000;
+
+		}
+	    .DanhMucChinh{
+	      color: #fff;
+	    }
+		
+		.carousel-control {
+		background: none !important; 
+		filter: none !important; 
+		progid: none !important; 
+		}
+		
+		#addresslink {
+			padding-left: 10px; 
+			color: blue;  
+			background-color: #EFEFEF;"
+		}
+		.panel-heading {
+			background-color:#189EFF !important ;
+			color: white !important;
+			font-size: 15pt;
+		}
+		.linknav {
+			color: #AF9D99
+		}
+		.swiper-container {
+        width: 100%;
+        height: 300px;
+    	}
+	    .thumbnail{    
+	    border: 0px solid #ffffff !important;
+	    }
+	    .swiper-slide {
+	        text-align: center;
+	        font-size: 18px;
+	        background: #fff;
+	        width: 250px !important;
+	        /* Center slide text vertically */
+	        display: -webkit-box;
+	        display: -ms-flexbox;
+	        display: -webkit-flex;
+	        display: flex;
+	        -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	        -webkit-justify-content: center;
+	        justify-content: center;
+	        -webkit-box-align: center;
+	        -ms-flex-align: center;
+	        -webkit-align-items: center;
+	        align-items: center;
+	    }
+	    .bottom {
+	    	text-align: left; 
+	    	padding:20px; 
+	    	line-height: 25px; 
+	    	font-size: 10pt; "
+	    }
+	   	.swiper-slide img {
+	   		width: 80%;
+	   		height: 80%;
+	   	}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row heading">
+			<!--Logo-->
+			<div class="col-sm-1 col-md-1 col-lg-1"></div> 
+			<div class="col-sm-2 col-md-2 col-lg-2"> 			
+				<div class="logo">
+					<img src="img/Auction.png"/>	
+				</div>
+			</div>
+			<!--Search input-->
+			<div class="col-sm-5 col-md-5 col-lg-5 TimKiemSP">
+				<div class="input-group">
+     				 <input type="text" class="form-control inputext" placeholder="Tìm danh mục, sản phẩm mong muốn.....">
+      				 <span class="input-group-btn">
+                     <button class="btn btn-secondary inputext" type="button">Tìm kiếm</button>
+                    </span>
+                </div>
+			</div>
+			<!--Sign up-->
+			<div class="col-sm-1 col-md-1 col-lg-1"></div>
+			<div class="col-sm-1 col-md-1 col-lg-1 EditButtonLogin" >
+				<a href="#" id="btnDangKiChinh"><img src="img/DangKi.png"/>Đăng kí</a>
+				
+				<div class="modal fade" tabindex="-1" id ="GiaoDienDangKi" data-keyboard ="false" data-backdrop ="static">
+                  <div class="modal-dialog" >
+                    <div class="modal-content">
+                      <div class="modal-header"> <!-- *********** ĐĂNG KÍ ***********-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" class= "ThongTinDangKi" ><img src="img/Happy.png"/> Đăng kí tài khoản</h4>
+                        <label class= "ThongTinDangKi"> Bạn đã có tài khoản?
+                        <button type="button" class="btn btn-primary" id="DangNhapTrongDangKi" >Đăng nhập</button>
+                        </label>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="AccountEMail" >Email</label>
+                                <input type="text" class="form-control" id="AccountEMail" placeholder="Nhập email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Mật khẩu</label>
+                                <input type="text" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                            </div>
+                            <div class="form-group">
+                                <label for="AccountName" class="control-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="AccountName" placeholder="Nhập họ tên">
+                            </div>
+                            <div class="form-group">
+                                 <label for = "Nam" class="control-label">Giới tính</label>
+                                 <label class="radio-inline" id="Nam"><input type="radio" name="optradio">Nam</label>
+                                <label class="radio-inline"><input type="radio" name="optradio">Nữ</label>
+                            </div>
+                            <div class="form-group">
+                                 
+                            <label for="NgaySinh">Ngày sinh
+                              	<select class="form-control" id="ngay">
+	                                <option value="0"selected>Ngày</option>
+	                                <option value="1">1</option>
+	                                <option value="2">2</option>
+	                                <option value="3">3</option>
+	                                <option value="4">4</option>
+	                                <option value="5">5</option>
+	                                <option value="6">6</option>
+	                                <option value="7">7</option>
+	                                <option value="8">8</option>
+	                                <option value="9">9</option>
+	                                <option value="10">10</option>
+	                                <option value="11">11</option>
+	                                <option value="12">12</option>
+	                                <option value="13">13</option>
+	                                <option value="14">14</option>
+	                                <option value="15">15</option>
+	                                <option value="16">16</option>
+	                                <option value="17">17</option>
+	                                <option value="199">199</option>
+	                                <option value="19">19</option>
+	                                <option value="20">20</option>
+	                                <option value="21">21</option>
+	                                <option value="22">22</option>
+	                                <option value="23">23</option>
+	                                <option value="24">24</option>
+	                                <option value="25">25</option>
+	                                <option value="26">26</option>
+	                                <option value="27">27</option>
+	                                <option value="28">28</option>
+	                                <option value="29">29</option>
+	                                <option value="30">30</option>
+	                                <option value="31">31</option>
+                              	</select>
+
+                              	<select class="form-control" id="thang">
+	                               	<option value="00"selected>Tháng</option>
+	                                <option value="01">01</option>
+	                                <option value="02">02</option>
+	                                <option value="03">03</option>
+	                                <option value="04">04</option>
+	                                <option value="05">05</option>
+	                                <option value="06">06</option>
+	                                <option value="07">07</option>
+	                                <option value="08">08</option>
+	                                <option value="09">09</option>
+	                                <option value="010">10</option>
+	                                <option value="011">11</option>
+	                                <option value="012">12</option>
+                              	</select>
+
+                              	<select class="form-control" id="nam">
+	                               <option value="00"selected>Năm</option>
+	                               <option value="2017">2017</option>
+	                                <option value="2016">2016</option>
+	                                <option value="2015">2015</option>
+	                                <option value="2014">2014</option>
+	                                <option value="2013">2013</option>
+	                                <option value="2012">2012</option>
+	                                <option value="2011">2011</option>
+	                                <option value="2010">2010</option>
+	                                <option value="2009">2009</option>
+	                                <option value="2008">2008</option>
+	                                <option value="2007">2007</option>
+	                                <option value="2006">2006</option>
+	                                <option value="2005">2005</option>
+	                                <option value="2004">2004</option>
+	                                <option value="2003">2003</option>
+	                                <option value="2002">2002</option>
+	                                <option value="2001">2001</option>
+	                                <option value="2000">2000</option>
+
+	                                <option value="1999">1999</option>
+	                                <option value="1998">1998</option>
+	                                <option value="1997">1997</option>
+	                                <option value="1996">1996</option>
+	                                <option value="1995">1995</option>
+	                                <option value="1994">1994</option>
+	                                <option value="1993">1993</option>
+	                                <option value="1992">1992</option>
+	                                <option value="1991">1991</option>
+	                                <option value="1990">1990</option>
+	                                <option value="1989">1989</option>
+	                                <option value="1988">1988</option>
+	                                <option value="1987">1987</option>
+	                                <option value="1986">1986</option>
+	                                <option value="1985">1985</option>
+	                                <option value="1984">1984</option>
+	                                <option value="1983">1983</option>
+	                                <option value="1982">1982</option>
+	                                <option value="1981">1981</option>
+	                                <option value="1980">1980</option>
+                              	</select>
+
+    
+                            </label>
+                             </div>
+                             <div class="form-group">
+                                <center><label class= "ThongTinDangKi"> Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch đấu giá <span id="ChinhSachDauGia">theo điều kiện sử dụng và chính sách của AUCTION.VN </span></label></center>
+                             </div>
+
+                         </form>
+                      </div>
+                      <div class="modal-footer">
+                       <center> <button type="button" class="btn btn-primary" id="btDangKi" >Đăng kí</button></center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+			</div>
+			
+
+			<!-- *********************** ĐĂNG NHẬP ******************-->
+		
+			<div class="col-sm-1 col-md-1 col-lg-1 EditButtonLogin">			
+	            <a href="#" id="btnDangNhapChinh"><img src="img/DangKi.png"/>Đăng nhập</a>
+				
+				<div class="modal fade" tabindex="-1" id ="loginModal" data-keyboard ="false" data-backdrop ="static">
+                  <div class="modal-dialog" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        <h4 class="modal-title" id="exampleModalLabel"><img src="img/Happy.png"/>Đăng nhập</h4>
+                        <div>
+                        	<span style="padding-left: 35px;">Bạn chưa có tài khoản?</span>
+                             <button type="button" id="btnDangKi">Tạo tài khoản mới</button>
+                          </div>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="recipient-name" class="control-label">Nhập Email</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="Nhập email"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="password" class="control-label">Mật khẩu</label>
+                            <input type="text" class="form-control" id="password" placeholder="Mật khẩu">
+                          </div>
+
+                          
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <center><button type="button" class="btn btn-primary" id="btnDangNhap">Đăng nhập</button></center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                	
+            </div>
+	        <div class=" col-sm-1 col-md-1 col-lg-1 dropdown EditButtonExit" id="btnDangXuatChinh">
+	    			<button class="dropdown-toggle " type="button" data-toggle="dropdown" id="btnTaiKhoan">
+	    			  	<img src ="img/user.png"/>
+	    			  		4D Group
+	    			  	<span class="caret"></span></button>
+	    			  	<ul class="dropdown-menu">
+		    			    <li><a href="#">Thông tin cá nhân</a></li>
+		    			    <li><a href="YeuThich.html">Danh sách sản phẩm yêu thích</a></li>
+		    			    <li><a href="#" id="btnDangXuat">Đăng xuất</a></li>
+	    			  	</ul>
+			</div>
+		</div>
+		<div class="row" id="Danhmuc" style="background-color:#189EFF;">
+			<div class="col-sm-1 col-md-1 col-lg-1">&nbsp;</div>
+			<div class="col-sm-10 col-md-10 col-lg-10">
+				<nav class="navbar navbar-default navheading">
+					   <ul class="nav navbar-nav" id="ulcustom">
+	      				<li class="dropdown userdropdown">
+	        				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	        				<img src="img/menu.png"/>
+	        				<span id ="Danhmucsanpham">DANH MỤC SẢN PHẨM</span>
+	        				<span class="caret"></span></a>
+	        				<ul class="dropdown-menu">
+			                    <li><a href="DienGiaDung_DienLanh.html">Điện gia dụng - Điện lạnh</a></li>
+			                    <li><a href="DienThoai_MayTinhBang.html">Điện thoại - máy tính bảng</a></li>
+			                    <li><a href="Laptop_ThietBiIT.html">Laptop - Thiết bị IT</a></li>
+			                    <li><a href="MayAnh.html">Máy ảnh - Quay phim</a></li>
+			                    <li><a href="TheThao.html">Thể thao - Dã ngoại</a></li>
+			                    <li><a href="ThietBiSo.html">Thiết bị số - Phụ kiện</a></li>
+                    			<li><a href="Tivi_ThietBiNgheNhin.html">Ti vi - Thiết bị nghe nhìn</a></li>
+                  			</ul>
+	      				</li>
+	      				<li><a href="#" id="SanPhamBanDaXem">SẢN PHẨM BẠN ĐÃ XEM</a></li>
+	      				<li><a href="YeuThich.html" id="SanPhamBanYeuThich"> SẢN PHẨM YÊU THÍCH</a></li>
+	    			</ul>
+				</nav>
+			</div>
+			<div class="col-sm-1 col-md-1 col-lg-1">				
+			</div>
+		</div>	
+
+				<!--Đường dẫn-->
+		<div class="row" id="addresslink">
+			<a href="index.html" class="linknav">Trang chủ </a>
+			<img src="img/link.jpg" >
+			<a href="TheThao.html" class="linknav">Máy ảnh</a>
+			<img src="img/link.jpg" >
+			<a href="kitana_maytapcobung.html" class="linknav">Máy tập cơ bụng Kitana</a>
+		</div>
+
+		<!--BODY-->
+
+		<div class="row" style="background-color: #F4F4F4">
+			<div class="col-sm-1 col-md-1 col-lg-1"> &nbsp;</div>
+			<div class="col-sm-10 col-md-10 col-lg-10">
+				<!--Sản phẩm-->
+				<div class="row" style="background-color: white; margin-bottom: 30px;">
+					<!--Hình ảnh sản phẩm-->
+					<div class="col-sm-5 col-md-5 col-lg-5 colspace">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  				<!-- Indicators -->
+		  					<ol class="carousel-indicators">
+		    				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    				<li data-target="#myCarousel" data-slide-to="1"></li>
+		    				<li data-target="#myCarousel" data-slide-to="2"></li>
+		  					</ol>
+
+		  					<!-- Wrapper for slides -->
+		  					<div class="carousel-inner">
+		    					<div class="item active">
+		      						<img src="img/TheThao/21.jpg" alt="Canon Lens">
+		    					</div>
+
+		    					<div class="item">
+		      						<img src="img/TheThao/22.jpg" alt="Canon Lens">
+		    					</div>
+
+		    					<div class="item">
+		      						<img src="img/TheThao/23.jpg" alt="Canon Lens">
+		    					</div>
+		  					</div>
+
+		  					<!-- Left and right controls -->
+		  					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    					<span class="glyphicon glyphicon-chevron-left"></span>
+		    					<span class="sr-only">Previous</span>
+		  					</a>
+		  					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		    					<span class="glyphicon glyphicon-chevron-right"></span>
+		    					<span class="sr-only">Next</span>
+		  					</a>
+						</div>	
+					</div>
+					<!--Thông tin sản phẩm-->
+					<div class="col-sm-7 col-md-7 col-lg-7 colspace">
+						<!--Tên sản phẩm-->
+						<div class="row">
+							<h1><b>Máy Tập Cơ Đa Năng Kitana MK-412 New</b></h1>
+							Thương hiệu: Kitana
+							<hr>
+						</div>
+						<!--Thông tin chi tiết-->
+						<div class="row">
+							<!--Thông tin đấu giá-->
+							<div class="col-md-6" style="line-height: 30px;"> 
+								<b>Người bán:</b> <a href="#">takaramono</a>
+								<div style="color: red; font-weight:bold"> Giá bán: 2 7000 000đ</div>
+								Số người bán đấu giá : 122 người
+								<p id="demo" style="color:#4862A2"></p>
+							</div>
+							<!--Thông tin chi tiết sản phẩm-->
+							<div class="col-md-6">
+								<ul>
+									<li>Làm săn chắc các cơ vùng bụng, eo, hông và vai</li>
+									<li>Phối hợp được nhiều bài tập</li>
+									<li>Thiết kế mới với bàn đạp chân tùy chỉnh được với nút vặn kháng lực</li>
+									<li>Hệ thống 4 lò xo cải tiến kết hợp lõi thép</li>
+									<li>Khung thiết bị làm bằng thép cao cấp chịu tải trọng lên tới 150 Kg</li>
+								</ul>
+							</div>
+						</div>
+						<!--Input đấu giá-->
+						<div class="row" >
+							<form>
+								<div class="form-group">
+									<label for="userprice"> Giá của bạn:</label>
+									<input type="text" name="userprice" id="userprice">
+									<button type="button" class="btn btn-danger" style="margin-left: 10px;">
+										Đấu giá
+									</button>
+								</div>	
+							</form>	
+						</div>
+					</div>
+				</div>
+				<!--Sản phẩm tương tự-->
+				<div class="row">
+					<div class="panel panel-default" style="border:none">
+						<div class="panel-heading">
+							Sản phẩm tương tự		
+						</div>
+						<div class="panel-body">
+							<div class="row-fluid">
+							   	<div class="swiper-container">
+			                <div class="swiper-wrapper">
+			                    <div class="swiper-slide">
+			                            <div class="thumbnail">
+			                                 <center> 
+			                                   <img src="img/TheThao/2.jpg" alt="...">
+			                                    <div class="caption">
+			                                        <a href="TheThao.html" class="TenSanPham">     
+			                                        	Thảm tập yoga Fujia
+			                                        </a>
+			                                        <p>550.000đ</p>
+			                                        
+			                                    </div>
+			                                 </center>
+			                            </div>
+			                    </div>
+			                    <div class="swiper-slide">
+			                        <div class="thumbnail">
+			                                 <center> 
+			                                   <img src="img/TheThao/3.jpg" alt="...">
+			                                    <div class="caption">
+			                                        <a href="TheThao.html" class="TenSanPham">    Lều cắm trại TenTen
+			                                        </a>
+			                                        <p>2.500.000đ</p>
+			                                        
+			                                    </div>
+			                                 </center>
+			                        </div>
+			                    </div>
+			                    <div class="swiper-slide">
+			                        <div class="thumbnail">
+			                                 <center> 
+			                                   <img src="img/TheThao/4.jpg" alt="..." >
+			                                    <div class="caption">
+			                                        <a href="DienThoaiMayTinhBang20.html" class="TenSanPham"> 
+			                                        	Xe đạp leo núi Danaja
+			                                        </a>
+			                                        <p>5.800.000đ</p>
+			                                    </div>
+			                                 </center>
+			                        </div>
+			                    </div>
+			                    <div class="swiper-slide">
+			                        <div class="thumbnail">
+			                                 <center> 
+			                                   <img src="img/TheThao/5.jpg" alt="..." >
+			                                    <div class="caption">
+			                                        <a href="TheThao.html" class="TenSanPham">
+			                                               Xe đạp leo núi Fujito
+			                                        </a>
+			                                        <p>8.800.000đ</p>
+			                                        
+			                                    </div>
+			                                 </center>
+			                        </div> 
+			                    </div>
+			                    <div class="swiper-slide">
+			                        <div class="thumbnail">
+			                                 <center> 
+			                                   <img src="img/MayAnh/6.jpg" alt="..." >
+			                                    <div class="caption">
+			                                        <a href="TheThao.html" class="TenSanPham">       
+			                                        	Xe đạp leo núi Takijako
+			                                        </a>
+			                                        <p>8.800.000đ</p>
+			                                        
+			                                    </div>
+			                                 </center>
+			                        </div> 
+			                    </div>
+			                    <div class="swiper-slide">
+			                        <div class="thumbnail">
+			                                 <center> 
+			                                   <img src="img/MayAnh/7.jpg" alt="..." >
+			                                    <div class="caption">
+			                                        <a href="DienThoaiMayTinhBang17.html" class="TenSanPham">       
+			                                        	Máy ảnh Sony KE13234
+			                                        </a>
+			                                        <p>8.800.000đ</p>
+			                                        
+			                                    </div>
+			                                 </center>
+			                        </div> 
+			                    </div>
+			                </div>
+		                <!-- Add Pagination -->
+		                <div class="swiper-pagination"></div>
+		                <!-- Add Arrows -->
+		                <div class="swiper-button-next"></div>
+		                <div class="swiper-button-prev"></div>
+		            </div>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="col-sm-1 col-md-1 col-lg-1"> &nbsp;</div>
+		</div>
+
+		<!--BOTTOM-->
+		<div class="row bottom">
+			<div class="col-sm-1 col-md-1 col-lg-1"> &nbsp;</div>
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<b>HỖ TRỢ KHÁCH HÀNG</b>
+				<br>
+				<div style="color: red; font-weight: bold">
+					Hotline: 1900-6035
+				</div>
+				(1000đ/phút , 8-21h kể cả T7, CN)
+				<br>
+				Các câu hỏi thường gặp
+				<br>
+				Gửi yêu cầu hỗ trợ
+				<br>
+				Hướng dẫn đặt hàng
+				<br>
+				Phương thức vận chuyển
+				<br>
+				Chính sách đổi trả
+				<br>
+				Hướng dẫn mua trả góp
+			</div>
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<b>VỀ TIKI</b>
+				<br>
+				Giới thiệu Tiki.vn
+				<br>
+				Tuyển Dụng
+				<br>
+				Chính sách bảo mật
+				<br>
+				Điều khoản sử dụng
+				<br>
+				Hội Sách Online
+				<br>
+				Giới thiệu Tiki Xu
+				<br>
+				Tiki Tư Vấn
+				<br>
+				Ưu đãi doanh nghiệp		
+			</div>	
+ 			<div class="col-sm-3 col-md-3 col-lg-3">
+ 				<b>HỢP TÁC VÀ LIÊN KIẾT</b>
+ 				<br>
+				Quy chế hoạt động Sàn GDTMĐT
+				<br>
+				Foody.vn - Ăn gì ở đâu
+				<br>
+				iVIVU.com - Đặt khách sạn giá rẻ
+				<br>
+				Bán hàng cùng Tiki
+ 			</div>
+
+
+		</div>
+	</div>
+	<script type="text/javascript" src="assests/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="assests/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var countDownDate = new Date("May 31, 2017 15:37:25").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+		// Get todays date and time
+		var now = new Date().getTime();
+
+		// Find the distance between now an the count down date
+		var distance = countDownDate - now;
+
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// Display the result in the element with id="demo"
+		document.getElementById("demo").innerHTML ="Thời gian còn lại: " + days + " ngày " + hours + ":" + minutes + ":" + seconds;
+
+		// If the count down is finished, write some text 
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "Hết hạn";
+			  }
+			}, 1000);
+	</script>
+	<script src="dist/js/swiper.min.js"></script>
+
+	<script>
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        slidesPerView: 5,
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        spaceBetween: 5
+	    });
+
+	    var swiper1 = new Swiper('.swiper-container1', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        slidesPerView: 1,
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        spaceBetween: 5
+	    });
+    </script>
+    <script type="text/javascript">
+		 $(document).ready(function(){
+		 	$("#btnDangXuatChinh").hide();
+            $('#btnDangKi').click(function(){
+                
+                 $('#loginModal').modal('hide');
+                 $('#GiaoDienDangKi').modal('show');
+               
+            });
+
+            $('#DangNhapTrongDangKi').click(function(){
+               
+                 $('#loginModal').modal('show');
+                 $('#GiaoDienDangKi').modal('hide');
+               
+            });
+            $('#btnDangKiChinh').click(function(){
+               
+                $('#GiaoDienDangKi').modal('show');
+               
+            });
+             $('#btnDangNhapChinh').click(function(){
+               
+                $('#loginModal').modal('show');
+               
+            });
+             $('#btnDangNhap').click(function(){
+               
+               	$('#loginModal').modal('hide');
+                $("#btnDangKiChinh").hide();
+                $("#btnDangNhapChinh").hide();
+                $("#btnDangXuatChinh").show();
+                $(".EditButtonLogin").hide();
+            });
+             $('#btDangKi').click(function(){
+             	$('#GiaoDienDangKi').modal('hide');
+                $("#btnDangKiChinh").hide();
+                $("#btnDangNhapChinh").hide();
+                $("#btnDangXuatChinh").show();
+                $(".EditButtonLogin").hide();
+            });
+             $('#btnDangXuat').click(function(){
+                $("#btnDangKiChinh").show();
+                $("#btnDangNhapChinh").show();
+                $("#btnDangXuatChinh").hide();
+                $(".EditButtonLogin").show();
+            });
+        });
+	</script>
+</body>
+</html>
